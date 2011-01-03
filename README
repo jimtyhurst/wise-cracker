@@ -1,0 +1,13 @@
+# wise-cracker
+
+Generates random "wise sayings". Developed as a simple application while learning Clojure.
+
+## Usage
+
+(speak)
+
+## License
+
+Copyright (C) 2010 Jim Tyhurst
+
+Distributed under the Eclipse Public License, the same as Clojure.
