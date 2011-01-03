@@ -12,6 +12,17 @@
         is-selected-item? (fn [item] (partial = (choose-lexical-item feature-set)))]
     (is (not (nil? (some is-selected-item? (lexicon feature-set)))))))
 
-(deftest choose-lexical-item-dummy-implementation
-  "Expects first item in list, because random selection not implemented yet."
-  (is (= (choose-lexical-item #{:verb :transitive :singular}) "follows")))
+(deftest get-random-number-test-single-value
+  "Expects value [0,upper-limit)"
+  (let [upper-limit 1
+        r (get-random-number upper-limit)]
+    (is (= r 0))))
+
+(deftest get-random-number-test
+  "Expects value [0,upper-limit)"
+  (let [upper-limit 3
+        r (get-random-number upper-limit)]
+    ;FIXME - Need to call many times, but was not able to put 'is'
+    ;within 'loop'
+    (is (and (> r -1) (< r upper-limit)))))
+
