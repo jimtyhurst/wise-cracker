@@ -2,7 +2,9 @@
   (:use [wise-cracker.core] :reload)
   (:use [clojure.test]))
 
-;FIXME - Write tests.
+(deftest expand-lexical-item-test
+  (let [actual-item (expand-lexical-item #{:adjective} ())]
+    (is (not (nil? actual-item)))
+    (is (= (count actual-item) 1)))
+  )
 
-(deftest expand-symbol-test
-  (is true  "No tests have been written."))
