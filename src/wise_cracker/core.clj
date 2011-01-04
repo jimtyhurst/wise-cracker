@@ -21,7 +21,7 @@
       :else ("Usage: (expand feature-set)"))))
 
 (defn speak
-  "Returns a list of Strings as a generated Sentence."
+  "Returns a list of words (Strings) as a generated Sentence."
   []
-  (expand #{:s}))
+  (reverse (expand #{:s})))
 
