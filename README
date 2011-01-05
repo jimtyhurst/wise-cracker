@@ -2,6 +2,18 @@
 
 Generates random "wise sayings". Developed as a simple application while learning Clojure.
 
+Sample output:
+(most people follow women)
+(a distinguished river shivers)
+(mean rules shiver softly)
+(most women shiver softly)
+(a tall star rocks)
+(a river follows every ocean often)
+(pure distrust languishes softly)
+(trees wait for distrust)
+(blue distrust explodes quietly)
+(tainted rules languish quietly)
+
 ## Usage
 
 (speak)
