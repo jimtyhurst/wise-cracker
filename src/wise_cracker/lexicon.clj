@@ -5,7 +5,7 @@
               {:category :adverb} '("calmly" "often" "peacefully" "quietly" "serenely" "slowly" "softly")
               {:category :determiner, :number :singular} '("a" "every")
               {:category :determiner, :number :plural} '("most" "some")
-              {:category :determiner, :number :mass} '("little" "much")
+              {:category :determiner, :number :mass} '("all" "little" "much" "no")
               {:category :noun, :number :singular} '("man" "ocean" "person" "river" "road" "star" "stream" "tree" "woman")
               {:category :noun, :number :plural} '("cultural norms" "laws" "men" "oceans" "people" "rivers" "roads" "rules" "stars" "streams" "trees" "women")
               {:category :noun, :number :mass} '("distrust" "ecstasy" "enlightenment" "faithfulness" "goodness" "joy" "kindness" "love" "lovingkindness" "patience" "peace" "serenity" "trust" "water")

@@ -21,7 +21,7 @@
                                     ({:category :determiner, :number :plural} {:category :noun, :number :plural})
                                     ({:category :determiner, :number :plural} {:category :adjective} {:category :noun, :number :plural}))
                    {:category :np, :number :mass} '(({:category :noun, :number :mass})
-                                  ({:category :adjective} {:category :noun, :number :mass}))
+                                  ({:category :determiner, :number :mass} {:category :noun, :number :mass}))
                    {:category :vp, :number :singular} '(({:category :verb, :transitivity :intransitive, :number :singular})
                                       ({:category :verb, :transitivity :intransitive, :number :singular} {:category :adverb})
                                       ({:category :verb, :transitivity :transitive, :number :singular} {:category :np})
