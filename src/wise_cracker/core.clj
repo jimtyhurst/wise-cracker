@@ -31,5 +31,5 @@
 (defn speak
   "Returns a list of words (Strings) as a generated Sentence."
   []
-  (reverse (expand #{:s})))
+  (reverse (expand {:category :s})))
 
