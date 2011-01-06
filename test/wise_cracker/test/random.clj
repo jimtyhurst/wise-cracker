@@ -18,8 +18,8 @@
 
 (deftest choose-randomly-from-one-member-list
   "Expects the single member."
-  (let [expected-member '(#{:np :plural} #{:vp :plural})
-        items '((#{:np :plural} #{:vp :plural}))]
+  (let [expected-member '({:category :np, :number :plural} {:category :vp, :number :plural})
+        items '(({:category :np, :number :plural} {:category :vp, :number :plural}))]
     (is (= (count items) 1))
     (is (= (nth items 0) expected-member))
     (is (= (choose-randomly items) expected-member))))

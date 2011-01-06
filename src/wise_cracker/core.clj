@@ -20,6 +20,14 @@
       (is-lexical? feature-set) (expand-lexical-item feature-set word-list)
       :else ("Usage: (expand feature-set)"))))
 
+(defn build-tree
+  "Expands the given feature-set(s), building a tree representation."
+  ([feature-set]
+     (build-tree feature-set ()))
+  ([feature-set word-list]
+     ;FIXME
+     word-list))
+
 (defn speak
   "Returns a list of words (Strings) as a generated Sentence."
   []
