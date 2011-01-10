@@ -26,10 +26,12 @@
   []
   (reverse (expand-to-strings {:category :s})))
 
+(defstruct node :feature-set :children :lexical-content)
+
 (defn build-node
   "Returns a node holding the given data."
   [feature-set children lexical-content]
-  {:feature-set feature-set, :children children, :lexical-content lexical-content})
+  (struct-map node :feature-set feature-set, :children children, :lexical-content lexical-content))
 
 (defn expand-lexical-item-to-node
   "Returns node constructed for the given feature-set."
