@@ -23,3 +23,4 @@
     (is (= (count items) 1))
     (is (= (nth items 0) expected-member))
     (is (= (choose-randomly items) expected-member))))
+

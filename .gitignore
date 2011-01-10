@@ -2,4 +2,7 @@ pom.xml
 *jar
 lib
 classes
+
+# Temporary files from emacs
 *#
+.#*

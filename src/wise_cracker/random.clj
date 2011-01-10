@@ -1,6 +1,8 @@
 (ns wise-cracker.random)
 
-(def random-number-generator (new java.util.Random))
+(def seed (.getTime (new java.util.Date)))
+
+(def random-number-generator (new java.util.Random seed))
 
 (defn get-random-number
   "Returns a pseudorandom, uniformly distributed integer value between 0 (inclusive) and the specified value (exclusive)."
