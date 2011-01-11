@@ -57,6 +57,8 @@
 
 (defn speak-structure
   "Returns a string representation of generated phrase structure."
-  []
-  (format-nodes (build-tree {:category :s})))
+  ([]
+     (speak-structure {:category :s}))
+  ([feature-set]
+     (format-nodes (build-tree feature-set))))
 

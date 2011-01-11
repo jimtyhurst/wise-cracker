@@ -1,6 +1,7 @@
 (ns wise-cracker.test.core
   (:use [wise-cracker.core] :reload)
-  (:use [clojure.test]))
+  (:use [clojure.test])
+  (:require clojure.contrib.str-utils2))
 
 (deftest expand-lexical-item-test
   (let [actual-item (expand-lexical-item {:category :adjective} ())]
@@ -17,3 +18,8 @@
     (is (string? (actual-item :lexical-content)))
     (is (list? (actual-item :children)))
     (is (empty? (actual-item :children)))))
+
+(deftest speak-structure-test-s-sg
+  (let [actual-structure (speak-structure {:category :s, :number :singular})]
+    (is (contains? actual-structure "[:s [:np "))))
+
