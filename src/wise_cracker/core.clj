@@ -42,11 +42,11 @@
   "Expands the given feature-set(s) until reaching leaf nodes, accumulating a tree along the way."
   ([feature-set]
      (cond
-      (nil? feature-set) nil
-      (list? feature-set) (map expand-to-nodes feature-set)
+      (nil? feature-set) feature-set
+      (list? feature-set) feature-set
       (is-phrasal? feature-set) (build-node feature-set (map expand-to-nodes (choose-rule feature-set)) nil)
       (is-lexical? feature-set) (build-node feature-set () (choose-lexical-item feature-set))
-      :else ("Usage: (expand-to-nodes feature-set)"))))
+      :else "Usage: (expand-to-nodes feature-set)")))
 
 (defn build-tree
   "Expands the given feature-set(s), building a tree representation."

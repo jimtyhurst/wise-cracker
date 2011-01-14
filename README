@@ -18,6 +18,10 @@ Sample output:
 
 (speak)
 
+or
+
+(speak-structure)
+
 ## License
 
 Copyright (C) 2010 Jim Tyhurst
