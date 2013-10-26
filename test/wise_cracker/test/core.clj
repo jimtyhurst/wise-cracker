@@ -1,7 +1,6 @@
 (ns wise-cracker.test.core
   (:use [wise-cracker.core] :reload)
-  (:use [clojure.test])
-  (:require clojure.contrib.str-utils2))
+  (:use [clojure.test]))
 
 (deftest expand-lexical-item-test
   (let [actual-item (expand-lexical-item {:category :adjective} ())]
@@ -23,5 +22,4 @@
 (deftest speak-structure-test-s-sg
   "Expects partial structure based on given feature-set, even though full structure cannot be determined completely, because it is generated randomly."
   (let [actual-structure (speak-structure {:category :s, :number :singular})]
-    (is (clojure.contrib.str-utils2/contains? actual-structure "[:s [:np "))))
-
+    (is (re-find #"\[:s \[:np " actual-structure))))
